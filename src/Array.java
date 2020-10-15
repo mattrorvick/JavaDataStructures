@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Collections;
+
 
 public class Array {
     
@@ -15,6 +15,9 @@ public class Array {
 
         int sum = 0;
         int product = 1;
+
+        
+        
         
 
         Scanner userInput = new Scanner(System.in);
@@ -38,6 +41,9 @@ public class Array {
         System.out.println("Take a guess on the sum of these numbers, don't worry, I'll tell you.");
 
         userInput.nextInt();
+
+        int min = newArray.get(0);
+        int max = newArray.get(0);
         
         for (int num : newArray) {
             sum += num; // sum = sum + num
@@ -47,16 +53,40 @@ public class Array {
             product *= num;
         }
 
-        Object maxValue = Collections.max(newArray);
-        Object minValue = Collections.min(newArray);
+        for (int i = 0; i < newArray.size(); i++) {
+            if(newArray.get(i) >= max) {
+                max = newArray.get(i);
+            }
+        }
+
+        for (int i = 0; i < newArray.size(); i++) {
+            if(newArray.get(i) <= min) {
+                min = newArray.get(i);
+            }
+        }
+
+
+        // for (int i = 1; i < newArray.size(); i++) {
+        //     if(newArray.get(i) < min) {
+        //         min = newArray.get(i);
+        //     } else if(newArray.get(i) > max) {
+        //         max = newArray.get(i);
+        //     } else {
+        //         System.out.println("Nah");
+        //     }
+        // }
+        // Object maxValue = Collections.max(newArray);
+        // Object minValue = Collections.min(newArray);
+        
+    
 
         System.out.println("The sum of your array list is " + sum);
 
         System.out.println("The product of your array list is " + product);
 
-        System.out.println("The largest number is " + maxValue);
+        System.out.println("The largest number is " + max);
 
-        System.out.println("The smallest number is " + minValue);
+        System.out.println("The smallest number is " + min);
 
         
 

@@ -27,13 +27,13 @@ public class HashMapEx {
         String output = cars.get(input);
 
         if(input.equals("Camry")) {
-            System.out.println("Great! You can find that particular vehicle in the " + output + " section.");
+            System.out.println("Great! You can find the " + input + " in the " + output + " section.");
         } else if(input.equals("F100")) {
-            System.out.println("Great! You can find that particular vehicle in the " + output + " section.");
+            System.out.println("Great! You can find the " + input + " in the " + output + " section.");
         } else if(input.equals("Ram")) {
-            System.out.println("Great! You can find that particular vehicle in the " + output + " section.");
+            System.out.println("Great! You can find the " + input + " in the " + output + " section.");
         } else if(input.equals("Accord")) {
-            System.out.println("Great! You can find that particular vehicle in the " + output + " section.");
+            System.out.println("Great! You can find the " + input + " in the " + output + " section.");
         } else {
             System.out.println("Sorry we don't carry that particular vehicle.");
         }
